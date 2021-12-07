@@ -20,6 +20,22 @@ h3{
   margin:0.1rem;
 }
 
+.cart{
+  margin-left: 180px;
+}
+
+.searchbox{
+  margin-right: -80px;
+  margin-left: 140px;
+  padding-right: 14px;
+}
+
+.btnsearch{
+  /* margin-left: 300px; */
+  margin-top: -98px;
+  padding: 14px;
+}
+
 /* carousel */
 .carousel-item-next,
 .carousel-item-prev,
@@ -45,5 +61,5 @@ h3{
   margin-right: auto;
 }
 .carousel a {
-  margin: 0 auto;
+  margin: 10 auto;
 }

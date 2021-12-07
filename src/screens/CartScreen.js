@@ -35,7 +35,7 @@ function CartScreen() {
           <h1>Shopping Cart</h1>
           {cartItems.length === 0 ? (
             <Message variant="info">
-              Your cart is empty <Link to="/">Go Back</Link>
+              Your cart is empty <Link to="/#/">Go Back</Link>
             </Message>
           ) : (
             <ListGroup variant="flush">
@@ -43,16 +43,17 @@ function CartScreen() {
                 <ListGroup.Item key={item.product}>
                   <Row>
                     <Col md={2}>
-                      <Image src={item.image} alt={item.name} fluid rounded />
+                      <Image src={item.image} alt={item.product_name} fluid rounded />
                     </Col>
                     <Col md={3}>
-                      <Link to={`/product/${item.product}`}>{item.name}</Link>
+                      <Link to={`/#/product/${item.product}`}>{item.product_name}</Link>
                     </Col>
 
-                    <Col md={2}>${item.price}</Col>
+                    <Col md={2}>${item.min_price}</Col>
 
                     <Col md={3}>
                       <Form.Control
+                        // type="number"
                         as="select"
                         value={item.qty}
                         onChange={(e) =>
@@ -61,11 +62,11 @@ function CartScreen() {
                           )
                         }
                       >
-                        {[...Array(item.countInStock).keys()].map((x) => (
+                        {/* {[...Array(item.countInStock).keys()].map((x) => (
                           <option key={x + 1} value={x + 1}>
                             {x + 1}
                           </option>
-                        ))}
+                        ))} */}
                       </Form.Control>
                     </Col>
 
